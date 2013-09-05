@@ -1,0 +1,177 @@
+<html>
+	<head>
+		<script src="mraid.js"></script>
+		<style>
+			label {
+			  width: 150px;
+			  margin-right: 10px;
+			  display: inline-block;
+			  text-align: right;
+			}
+			input {
+			  width: 150px;
+			}
+		</style>
+	</head>
+	
+	<body style="padding: 0; margin: 0;">
+	
+		<div id="small" style="width: 320px; height: 50px; display: none;" onclick="resize();">
+			<img src="http://cunicode.com/site/wp-content/uploads/2011/09/logo-cim-50h.png">
+		</div>
+		
+		<div id="big" style="width: 320px; height: 340px; display: none;">
+			<div style="width: 320px; height: 20px; background-color: gray;">
+				<div id="resizeButton" style="width: 25%; float: left; font-size: 12pt; text-align: center;" onclick="showInsideDiv(resizeDiv);">Resize</div>
+				<div id="expandButton" style="width: 25%; float: left; font-size: 12pt; text-align: center;" onclick="showInsideDiv(expandDiv);">Expand</div>
+				<div id="statusButton" style="width: 25%; float: left; font-size: 12pt; text-align: center;" onclick="showInsideDiv(statusDiv);">Status</div>
+				<div id="closeButton"  style="width: 25%; float: left; font-size: 12pt; text-align: center; display: none;" onclick="closeTapped();">Close</div>
+			</div>
+			
+			<div id="resize" style="width: 320px; height: 320px;">
+				<label for="width">width (px):</label><input type="number" id="resizeWidth" value='320'/><br/>
+				<label for="height">height (px):</label><input type="number" id="resizeHeight" value='340'/><br/>
+				<label for="customClosePosition">customClosePosition:</label>
+					<select id="customClosePosition">
+						<option value="top-right">top right</option>
+						<option value="top-left">top left</option>
+						<option value="center">center</option>
+						<option value="bottom-right">bottom right</option>
+						<option value="bottom-left">bottom left</option>
+                        <option value="top-center">top center</option>
+                        <option value="bottom-center">bottom center</option>
+					</select><br/>
+				<label for="offsetX">offsetX (px):</label><input type="number" id="offsetX" value='0'/><br/>
+				<label for="offsetY">offsetY (px):</label><input type="number" id="offsetY" value='0'/><br/>
+				<label for="allowOffscreen">allowOffscreen:</label><input type="checkbox" id="allowOffscreen" checked/><br/>
+				<center><button type="button" onclick="resize();">Do resize</button></center>
+			</div>
+			
+			<div id="expand" style="width: 320px; height: 320px;">
+                <label for="expandURL">expand URL:</label><input type="text" id="expandURL"/><br/>
+				<label for="width">width (px):</label><input type="number" id="expandWidth" value='320'/><br/>
+				<label for="height">height (px):</label><input type="number" id="expandHeight" value='340'/><br/>
+				<label for="useCustomClose">useCustomClose:</label><input type="checkbox" id="useCustomClose"/><br/>
+				<label for="allowOrientationChange">allowOrientationChange:</label><input type="checkbox" id="allowOrientationChange" checked/><br/>
+				<label for="forceOrientation">forceOrientation:</label>
+					<select id="forceOrientation">
+						<option value="none">none</option>
+						<option value="portrait">portrait</option>
+						<option value="landscape">landscape</option>
+					</select><br/>
+				<label for="isModal">isModal:</label><input type="checkbox" id="isModal" disabled checked/><br/>
+				<center><button type="button" onclick="expand();">Do expand</button></center>
+			</div>
+			
+			<div id="status" style="width: 320px; height: 320px; display: block;">
+				<label for="state">state:</label><input type="text" id="state" disabled/><br/>
+				<label for="isViewable">isViewable:</label><input type="checkbox" id="isViewable" disabled/><br/>
+				<label for="placementType">placementType:</label><input type="text" id="placementType" disabled/><br/>
+				<label for="currentPosition">currentPosition:</label><input type="text" id="currentPosition" disabled/><br/>
+				<label for="defaultPosition">defaultPosition:</label><input type="text" id="defaultPosition" disabled/><br/>
+				<label for="maxSize">maxSize:</label><input type="text" id="maxSize" disabled/><br/>
+				<label for="screenSize">screenSize:</label><input type="text" id="screenSize" disabled/><br/>
+				<center><button type="button" id="sms" onclick="window.open('sms:1-111-111-1111');">sms</button>
+				<button type="button" id="phone" onclick="window.open('tel:1-111-111-1111');">tel</button>
+				<button type="button" id="email" onclick="window.open('mailto:some@gmail.com');">email</button></br>
+				<button type="button" id="calendar" onclick="mraid.createCalendarEvent({id:'19950401-080045-40000F192713-0052',description:'Meeting with Joe\'s team',location:'Conf call #+4402000000001',summary:'Agenda:\n \n \t* Introductions \n \t* AoB',start:'2013-03-24T09:00-08:00',end:'2013-03-24T10:00:00-08:00',status:'pending',freebusy:'transparent',recurrence:{frequency:'daily',interval:'1',expires:'2013-08-01T01:00:00+01:00',exceptionDates:['2013-12-22','2013-12-29'],daysInWeek:[0,6],daysInMonth:[4,-10],daysInYear:[262,-102],weeksInMonth:[1,-1],monthsInYear:[4,10]},reminder:'2013-03-24T13:00:00+00:00'});">calendar</button>
+				<button type="button" id="storePicture" onclick="mraid.storePicture('http://www.trafficspaces.com/blog/wp-content/uploads/2009/01/ts_openx_google.jpg');">storePicture</button>
+				<button type="button" id="inlinevideo" onclick="mraid.playVideo('http://dl.dropbox.com/u/43451288/OpenXMovie.mp4');">inlinevideo</button></br></br>
+                <button type="button" onclick="updateStatus();">Update status</button></center>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			var smallDiv = document.getElementById("small");
+            var bigDiv 	 = document.getElementById("big");
+            var resizeDiv = document.getElementById("resize");
+            var expandDiv = document.getElementById("expand");
+            var statusDiv = document.getElementById("status");
+			
+			function layoutAd() {
+				var isDefault = mraid.getState() == 'default';
+				smallDiv.style.display = isDefault ? 'block' : 'none';
+				bigDiv.style.display   = isDefault ? 'none'  : 'block';
+			}
+			
+			function showAd() {
+                mraid.removeEventListener("ready", showAd);
+                layoutAd();
+                showInsideDiv(statusDiv);
+			}
+			
+			function showInsideDiv(div) {
+                resizeDiv.style.display = (div == resizeDiv) ? 'block' : 'none';
+                expandDiv.style.display = (div == expandDiv) ? 'block' : 'none';
+                statusDiv.style.display = (div == statusDiv) ? 'block' : 'none';
+                document.getElementById("resizeButton").style.color = (div == resizeDiv) ? 'red' : 'black';
+                document.getElementById("expandButton").style.color = (div == expandDiv) ? 'red' : 'black';
+                document.getElementById("statusButton").style.color = (div == statusDiv) ? 'red' : 'black';
+			}
+			
+			function resize() {
+				var width = document.getElementById("resizeWidth").value;
+				var height = document.getElementById("resizeHeight").value;
+				var customClosePosition = document.getElementById("customClosePosition").value;
+				var offsetX = document.getElementById("offsetX").value;
+				var offsetY = document.getElementById("offsetY").value;
+				var allowOffscreen = document.getElementById("allowOffscreen").checked;
+				mraid.setResizeProperties({'width':width,'height':height,'customClosePosition':customClosePosition,'offsetX':offsetX,'offsetY':offsetY,'allowOffscreen':allowOffscreen});
+                document.getElementById("closeButton").style.display = 'none';
+				mraid.resize();
+			}
+			
+			function expand() {
+                var expandURL = document.getElementById("expandURL").value;
+				var width = document.getElementById("expandWidth").value;
+				var height = document.getElementById("expandHeight").value;
+				var useCustomClose = document.getElementById("useCustomClose").checked;
+				var allowOrientationChange = document.getElementById("allowOrientationChange").checked;
+				var forceOrientation = document.getElementById("forceOrientation").value;
+                var isModal = document.getElementById("isModal").checked;
+				mraid.setExpandProperties({'width':width,'height':height,'useCustomClose':useCustomClose});
+                mraid.setOrientationProperties({'allowOrientationChange':allowOrientationChange,'forceOrientation':forceOrientation});
+                document.getElementById("closeButton").style.display = useCustomClose ? 'block' : 'none';
+				mraid.expand(expandURL);
+			}
+			
+			function closeTapped() {
+				mraid.close();
+			}
+			
+			function updateStatus() {
+                layoutAd();
+                
+				document.getElementById("state").value = mraid.getState();
+				document.getElementById("isViewable").checked = mraid.isViewable();
+				document.getElementById("placementType").value = mraid.getPlacementType();
+				document.getElementById("currentPosition").value = JSON.stringify(mraid.getCurrentPosition());
+				document.getElementById("defaultPosition").value = JSON.stringify(mraid.getDefaultPosition());
+				document.getElementById("maxSize").value = JSON.stringify(mraid.getMaxSize());
+				document.getElementById("screenSize").value = JSON.stringify(mraid.getScreenSize());
+				document.getElementById("sms").disabled = !mraid.supports('sms');
+				document.getElementById("phone").disabled = !mraid.supports('tel');
+				document.getElementById("email").disabled = !mraid.supports('email');
+				document.getElementById("calendar").disabled = !mraid.supports('calendar');
+				document.getElementById("storePicture").disabled = !mraid.supports('storePicture');
+				document.getElementById("inlinevideo").disabled = !mraid.supports('inlinevideo');
+			}
+			
+			function showError(message,action) {
+          		alert('SDK ERROR!\n message: '+message+'\n action: '+action);
+			}
+			
+			mraid.addEventListener("viewableChange", updateStatus);
+			mraid.addEventListener("sizeChange", updateStatus);
+			mraid.addEventListener("stateChange", updateStatus);
+			mraid.addEventListener("error", showError);
+			
+			if ( mraid.getState() == "default" ) {
+				showAd();
+			} else {
+				mraid.addEventListener("ready", showAd);
+			}
+			
+		</script>
+	</body>
+</html>
