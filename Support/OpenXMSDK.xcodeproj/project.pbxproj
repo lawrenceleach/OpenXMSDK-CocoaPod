@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		611BEE9617F24C2300763B08 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611BEE9517F24C2300763B08 /* Foundation.framework */; };
+		611BEE9817F24C2300763B08 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611BEE9717F24C2300763B08 /* CoreGraphics.framework */; };
+		611BEE9A17F24C2300763B08 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611BEE9917F24C2300763B08 /* UIKit.framework */; };
+		611BEEA017F24C2300763B08 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 611BEE9E17F24C2300763B08 /* InfoPlist.strings */; };
+		611BEEA217F24C2300763B08 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 611BEEA117F24C2300763B08 /* main.m */; };
+		611BEEA617F24C2300763B08 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 611BEEA517F24C2300763B08 /* AppDelegate.m */; };
+		611BEEA817F24C2300763B08 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 611BEEA717F24C2300763B08 /* Images.xcassets */; };
+		611BEEAF17F24C2300763B08 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611BEEAE17F24C2300763B08 /* XCTest.framework */; };
+		611BEEB017F24C2300763B08 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611BEE9517F24C2300763B08 /* Foundation.framework */; };
+		611BEEB117F24C2300763B08 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611BEE9917F24C2300763B08 /* UIKit.framework */; };
+		611BEEB917F24C2300763B08 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 611BEEB717F24C2300763B08 /* InfoPlist.strings */; };
+		611BEEBB17F24C2300763B08 /* OpenXMSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 611BEEBA17F24C2300763B08 /* OpenXMSDKTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		611BEEB217F24C2300763B08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 611BEE8A17F24C2300763B08 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 611BEE9117F24C2300763B08;
+			remoteInfo = OpenXMSDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		611BEE9217F24C2300763B08 /* OpenXMSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenXMSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		611BEE9517F24C2300763B08 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		611BEE9717F24C2300763B08 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		611BEE9917F24C2300763B08 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		611BEE9D17F24C2300763B08 /* OpenXMSDK-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OpenXMSDK-Info.plist"; sourceTree = "<group>"; };
+		611BEE9F17F24C2300763B08 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		611BEEA117F24C2300763B08 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		611BEEA317F24C2300763B08 /* OpenXMSDK-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenXMSDK-Prefix.pch"; sourceTree = "<group>"; };
+		611BEEA417F24C2300763B08 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		611BEEA517F24C2300763B08 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		611BEEA717F24C2300763B08 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		611BEEAD17F24C2300763B08 /* OpenXMSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenXMSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		611BEEAE17F24C2300763B08 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		611BEEB617F24C2300763B08 /* OpenXMSDKTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OpenXMSDKTests-Info.plist"; sourceTree = "<group>"; };
+		611BEEB817F24C2300763B08 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		611BEEBA17F24C2300763B08 /* OpenXMSDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenXMSDKTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		611BEE8F17F24C2300763B08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				611BEE9817F24C2300763B08 /* CoreGraphics.framework in Frameworks */,
+				611BEE9A17F24C2300763B08 /* UIKit.framework in Frameworks */,
+				611BEE9617F24C2300763B08 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		611BEEAA17F24C2300763B08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				611BEEAF17F24C2300763B08 /* XCTest.framework in Frameworks */,
+				611BEEB117F24C2300763B08 /* UIKit.framework in Frameworks */,
+				611BEEB017F24C2300763B08 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		611BEE8917F24C2300763B08 = {
+			isa = PBXGroup;
+			children = (
+				611BEE9B17F24C2300763B08 /* OpenXMSDK */,
+				611BEEB417F24C2300763B08 /* OpenXMSDKTests */,
+				611BEE9417F24C2300763B08 /* Frameworks */,
+				611BEE9317F24C2300763B08 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		611BEE9317F24C2300763B08 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				611BEE9217F24C2300763B08 /* OpenXMSDK.app */,
+				611BEEAD17F24C2300763B08 /* OpenXMSDKTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		611BEE9417F24C2300763B08 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				611BEE9517F24C2300763B08 /* Foundation.framework */,
+				611BEE9717F24C2300763B08 /* CoreGraphics.framework */,
+				611BEE9917F24C2300763B08 /* UIKit.framework */,
+				611BEEAE17F24C2300763B08 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		611BEE9B17F24C2300763B08 /* OpenXMSDK */ = {
+			isa = PBXGroup;
+			children = (
+				611BEEA417F24C2300763B08 /* AppDelegate.h */,
+				611BEEA517F24C2300763B08 /* AppDelegate.m */,
+				611BEEA717F24C2300763B08 /* Images.xcassets */,
+				611BEE9C17F24C2300763B08 /* Supporting Files */,
+			);
+			path = OpenXMSDK;
+			sourceTree = "<group>";
+		};
+		611BEE9C17F24C2300763B08 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				611BEE9D17F24C2300763B08 /* OpenXMSDK-Info.plist */,
+				611BEE9E17F24C2300763B08 /* InfoPlist.strings */,
+				611BEEA117F24C2300763B08 /* main.m */,
+				611BEEA317F24C2300763B08 /* OpenXMSDK-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		611BEEB417F24C2300763B08 /* OpenXMSDKTests */ = {
+			isa = PBXGroup;
+			children = (
+				611BEEBA17F24C2300763B08 /* OpenXMSDKTests.m */,
+				611BEEB517F24C2300763B08 /* Supporting Files */,
+			);
+			path = OpenXMSDKTests;
+			sourceTree = "<group>";
+		};
+		611BEEB517F24C2300763B08 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				611BEEB617F24C2300763B08 /* OpenXMSDKTests-Info.plist */,
+				611BEEB717F24C2300763B08 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		611BEE9117F24C2300763B08 /* OpenXMSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 611BEEBE17F24C2300763B08 /* Build configuration list for PBXNativeTarget "OpenXMSDK" */;
+			buildPhases = (
+				611BEE8E17F24C2300763B08 /* Sources */,
+				611BEE8F17F24C2300763B08 /* Frameworks */,
+				611BEE9017F24C2300763B08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenXMSDK;
+			productName = OpenXMSDK;
+			productReference = 611BEE9217F24C2300763B08 /* OpenXMSDK.app */;
+			productType = "com.apple.product-type.application";
+		};
+		611BEEAC17F24C2300763B08 /* OpenXMSDKTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 611BEEC117F24C2300763B08 /* Build configuration list for PBXNativeTarget "OpenXMSDKTests" */;
+			buildPhases = (
+				611BEEA917F24C2300763B08 /* Sources */,
+				611BEEAA17F24C2300763B08 /* Frameworks */,
+				611BEEAB17F24C2300763B08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				611BEEB317F24C2300763B08 /* PBXTargetDependency */,
+			);
+			name = OpenXMSDKTests;
+			productName = OpenXMSDKTests;
+			productReference = 611BEEAD17F24C2300763B08 /* OpenXMSDKTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		611BEE8A17F24C2300763B08 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "OpenX Technologies, Inc.";
+				TargetAttributes = {
+					611BEEAC17F24C2300763B08 = {
+						TestTargetID = 611BEE9117F24C2300763B08;
+					};
+				};
+			};
+			buildConfigurationList = 611BEE8D17F24C2300763B08 /* Build configuration list for PBXProject "OpenXMSDK" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 611BEE8917F24C2300763B08;
+			productRefGroup = 611BEE9317F24C2300763B08 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				611BEE9117F24C2300763B08 /* OpenXMSDK */,
+				611BEEAC17F24C2300763B08 /* OpenXMSDKTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		611BEE9017F24C2300763B08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				611BEEA017F24C2300763B08 /* InfoPlist.strings in Resources */,
+				611BEEA817F24C2300763B08 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		611BEEAB17F24C2300763B08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				611BEEB917F24C2300763B08 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		611BEE8E17F24C2300763B08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				611BEEA617F24C2300763B08 /* AppDelegate.m in Sources */,
+				611BEEA217F24C2300763B08 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		611BEEA917F24C2300763B08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				611BEEBB17F24C2300763B08 /* OpenXMSDKTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		611BEEB317F24C2300763B08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 611BEE9117F24C2300763B08 /* OpenXMSDK */;
+			targetProxy = 611BEEB217F24C2300763B08 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		611BEE9E17F24C2300763B08 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				611BEE9F17F24C2300763B08 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		611BEEB717F24C2300763B08 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				611BEEB817F24C2300763B08 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		611BEEBC17F24C2300763B08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		611BEEBD17F24C2300763B08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		611BEEBF17F24C2300763B08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenXMSDK/OpenXMSDK-Prefix.pch";
+				INFOPLIST_FILE = "OpenXMSDK/OpenXMSDK-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		611BEEC017F24C2300763B08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenXMSDK/OpenXMSDK-Prefix.pch";
+				INFOPLIST_FILE = "OpenXMSDK/OpenXMSDK-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		611BEEC217F24C2300763B08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OpenXMSDK.app/OpenXMSDK";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenXMSDK/OpenXMSDK-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "OpenXMSDKTests/OpenXMSDKTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		611BEEC317F24C2300763B08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OpenXMSDK.app/OpenXMSDK";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenXMSDK/OpenXMSDK-Prefix.pch";
+				INFOPLIST_FILE = "OpenXMSDKTests/OpenXMSDKTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		611BEE8D17F24C2300763B08 /* Build configuration list for PBXProject "OpenXMSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				611BEEBC17F24C2300763B08 /* Debug */,
+				611BEEBD17F24C2300763B08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		611BEEBE17F24C2300763B08 /* Build configuration list for PBXNativeTarget "OpenXMSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				611BEEBF17F24C2300763B08 /* Debug */,
+				611BEEC017F24C2300763B08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		611BEEC117F24C2300763B08 /* Build configuration list for PBXNativeTarget "OpenXMSDKTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				611BEEC217F24C2300763B08 /* Debug */,
+				611BEEC317F24C2300763B08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 611BEE8A17F24C2300763B08 /* Project object */;
+}
